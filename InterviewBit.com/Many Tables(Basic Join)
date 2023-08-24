@@ -1,0 +1,16 @@
+/*
+Given 2 tables ENGINEER and DATA, query for the total count of each Type in the ENGINEER table. Print the result in alphabetical order of the Type.
+
+Note: The ID columns in both tables are identical.:
+
+‘ID’ in DATA table is identical to ‘ID’ in ENGINEER table
+
+DATA
+
+NOTE : The output should contain 1 columns by the name ‘A’. The output should be Sorted by Type .
+*/
+sol:
+
+SELECT sum(ENGINEER.count) as A from ENGINEER join DATA on ENGINEER.ID=DATA.ID 
+GROUP BY DATA.Type
+order by DATA.Type asc;
