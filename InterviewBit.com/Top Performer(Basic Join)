@@ -1,0 +1,6 @@
+SELECT if(EVALUATION.Rating<6,NULL,Name) as Names,Rating
+from EMPLOYEE join EVALUATION 
+on EMPLOYEE.points between EVALUATION.Lower and EVALUATION.Upper
+order by Rating desc,Name;
+
+// using if condtion beside select that if rating less than 6 return null else return the name 
