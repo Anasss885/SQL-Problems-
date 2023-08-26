@@ -1,0 +1,8 @@
+select count(*) as 'COUNT(Name)' from EVALUATION 
+where Rating<=3;
+
+select count(*) as 'COUNT(Name)' from EVALUATION 
+where Rating>=8;
+
+/*the problem can be solved in one way from one 
+table like this sol despite of its statment forced you through indirect way to use join , it's a medium level proble btw */
