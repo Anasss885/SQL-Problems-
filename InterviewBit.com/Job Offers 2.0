@@ -1,0 +1,11 @@
+select SUM(Distinct Salary) as Salary from Jobs
+join Students on Jobs.Id=Students.Id 
+join Departments on Departments.DepartmentId=Students.DepartmentId and DepartmentName='CSE'
+order by DepartmentName;
+
+
+
+Another Sol:
+
+select sum(distinct(Salary)) as Salary from Jobs
+where Id in (select Id from Students where DepartmentId in (select DepartmentId from Departments where DepartmentName ="CSE"))
